@@ -42,7 +42,7 @@ def ask_for_numbers():
 
 
 def main():
-  print("Welcome to the calculator!")
+  print("calculator")
   while True:
     print("\n1) Add numbers")
     print("2) Subtract numbers")
