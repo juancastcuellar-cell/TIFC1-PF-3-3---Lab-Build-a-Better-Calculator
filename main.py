@@ -1,12 +1,10 @@
 def addmultiplenumbers(numbers):
-  """Return the sum of all numbers in the list."""
   total = 0
   for n in numbers:
     total = total + n
   return total
 
 def subtractmultiplenumbers(numbers):
-  """Start with the first number, then subtract each of the others in turn."""
   if len(numbers) == 0:
     raise ValueError("Need at least one number")
   result = numbers[0]
@@ -16,34 +14,29 @@ def subtractmultiplenumbers(numbers):
 
 
 def multiplymultiplenumbers(numbers):
-  """Return the result of multiplying every number in the list together."""
   result = 1
   for n in numbers:
     result = result * n
   return result
 
 def dividemultiplenumbers(numbers):
-  """Start with the first number, then divide by each of the others in turn."""
   if len(numbers) == 0:
     raise ValueError("Need at least one number")
   result = numbers[0]
   for n in numbers[1:]:
-    result = result / n  # raises ZeroDivisionError if n is 0
+    result = result / n  
   return result
 
 
 def isitaninteger(num):
-  """Return True if num is a whole number (3 or 3.0), False otherwise."""
   return float(num).is_integer()
 
 
 def isiteven(num):
-  """Return True only if num is a whole number AND divisible by 2."""
   return isitaninteger(num) and num % 2 == 0
 
 
 def ask_for_numbers():
-  """Ask the user for numbers separated by spaces and return them as a list."""
   text = input("Enter numbers separated by spaces: ")
   return [float(part) for part in text.split()]
 
